@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mais Uma</title>
+</head>
+<body>
+    <input type="number" name="n1" id="n1"> +
+    <input type="number" name="n2" id="n2">
+    <br><input type="button" value="Resultado" onclick="clicar()">
+    <p id="n3">Reslutado</p>
+    <script>
+        /*
+        Para a posteridade.
+        Pretendo colocar no repositório todo e qualqer teste, ou projeto
+        da coisa mais insignificante, até a mais complexa independente
+        de como for feita, totalmente sozinho do 0, ou tendo ajuda.
+        Sou o tipo de pessoa que não age para o agora, na verdade, detesto
+        isso... Minhas atitudes, pensamentos e planejamentos são para o
+        Nícolas velho... E espero que já barbudo apos mais de 110 dias
+        fazendo tratamento para crescer barba.
+        */
+        function clicar() {
+            var a1 = document.getElementById('n1')
+            var a2 = document.getElementById('n2')
+            var a3 = document.getElementById('n3')
+            var a4 = Number(a1.value)
+            var a5 = Number(a2.value)
+            var a6 = a4 + a5
+            a3.innerHTML = `A soma entre ${a4} e ${a5} é: ${a6}`
+        }
+    </script>
+</body>
+</html>

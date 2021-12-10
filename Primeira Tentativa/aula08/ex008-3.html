@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../aula01/favicon.ico" type="image/x-icon">
+    <title>Sistema de Nacionalidade</title>
+</head>
+<body>
+    <h1>Saiba se você é Brasileiro ou Estrangeiro!</h1>
+    Nacionalidade: <input type="text" name="txtbx" id="txtbx">
+    <input type="button" value="Conferir" onclick="conferir()">
+    <div id="res"></div>
+    <script>
+        function conferir () {
+            var txtb = window.document.getElementById('txtbx') 
+            var res = window.document.getElementById('res')
+            res.innerHTML = ``
+            if (pais != 'Brasil') {
+                res.innerHTML = `Você é Estrangeiro`
+            } else {
+                res.innerHTML = `Você é Brasileiro`
+            }
+        }
+    </script>
+</body>
+</html>

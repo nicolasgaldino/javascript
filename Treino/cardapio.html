@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio</title>
+    <style>
+        body {
+            background: rgba(15, 15, 248, 0.5);
+            font: normal 15pt arial;
+        }
+
+        header {
+            color: white;
+            text-align: center;
+        }
+
+        section {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            width: 500px;
+            margin: auto;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.39);
+        }
+
+        div {
+            text-align: center;
+            padding: 10px;
+        }
+
+        footer {
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-style: italic
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>
+            Cardápio
+        </h1>
+    </header>
+    <section>
+        <div>
+            Digite um número, e veja as opções!
+        </div>
+        <div><input type="number" name="n1" id="n1"></div>
+        <div id="n2"></div>
+        <div>
+            <p><input type="button" value="Conferir" onclick="clicar()" id="n3"></p>
+        </div>
+    </section>
+    <footer>By: &copy;Nícolas Galdino</footer>
+    <script>
+        window.alert('Digite os números de 0 a 9')
+        function clicar() {
+            var a1 = document.getElementById('n1')
+            var a2 = document.getElementById('n2')
+            var a3 = document.getElementById('n3')
+            var a4 = Number(a1.value)
+            switch (a4) {
+                case 0:
+                    a2.innerText = 'Batata Recheada.'
+                    break
+                case 1:
+                    a2.innerText = 'Pizza 4 Queijos.'
+                    break
+                case 2:
+                    a2.innerText = 'Lasanha de Frango Caipira.'
+                    break
+                case 3:
+                    a2.innerText = 'Macarrão com Carne Moída.'
+                    break
+                case 4:
+                    a2.innerText = 'Panqueca.'
+                    break
+                case 5:
+                    a2.innerText = 'Bife com Batata Frita.'
+                    break
+                case 6:
+                    a2.innerText = 'Feijoada.'
+                    break
+                case 7:
+                    a2.innerText = 'Macarronada ao Molho Branco.'
+                    break
+                case 8:
+                    a2.innerText = 'Joelho de Queijo e Preseunto'
+                    break
+                case 9:
+                    a2.innerText = 'Arroz com Brócolis.'
+                    break
+                default:
+                    window.alert('Por favor, digite números de 0 a 9.')
+                    break
+            }
+        }
+    </script>
+</body>
+
+</html>

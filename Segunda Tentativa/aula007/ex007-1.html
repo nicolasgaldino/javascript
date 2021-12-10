@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../aula001/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Somando Valores</title>
+    <style>
+        input {
+            font: normal 20pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contas Legais!</h1>
+    <input type="number" name="nun1" id="numo1"> +
+    <input type="number" name="nun2" id="numo2">
+    <input type="button" value="Somar" onclick="clicar()">
+    <p id="res">
+        Resultado:
+    </p>
+</body>
+<script>
+    function clicar() {
+    var nun1 = document.getElementById('numo1')
+    var nun2 = document.getElementById('numo2')
+    var resu = document.getElementById('res')
+    var nune1 = Number(nun1.value)
+    var nune2 = Number(nun2.value)
+    var som = nune1 + nune2
+    resu.innerHTML = `A soma entre ${nune1} e ${nune2} é: ${som}`
+    }
+</script>
+</html>

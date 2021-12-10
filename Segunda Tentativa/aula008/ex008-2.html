@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../aula001/favicon.ico" type="image/x-icon">
+    <title>DETRAN</title>
+</head>
+<body>
+    <h1>Multas!</h1>
+    Velocidade: <input type="number" name="n1" id="n1"> Km/h <br>
+    <input type="button" value="Conferir" onclick="clicar()">
+    <p id="oi"></p>
+    <script>
+        function clicar() {
+            var a1 = document.getElementById('n1')
+            var a3 = document.getElementById('oi')
+            var a2 = Number(a1.value)
+            if (a2 > 50) {
+               a3.innerHTML = `Sua velocidade é ${a2} Km/h, você está multado!` 
+            } else {
+                a3.innerHTML = 'Muito bem, use cinto de segurança.'
+            }
+        }
+    </script>
+</body>
+</html>

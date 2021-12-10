@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../aula001/favicon.ico" type="image/x-icon">
+    <title>Continhas</title>
+    <style>
+        body {
+            background-color: rgba(16, 16, 109, 0.63);
+            font: normal 20pt Arial;
+            color: white;
+        }
+        input {
+            font: normal 20pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando!</h1>
+    <p><input type="number" name="nb1" id="nb1"></p>
+    <p><input type="number" name="nb2" id="nb2"></p>
+    <p><input type="button" value="Resolver" onclick="clicar()"></p>
+    <p id="res">Resultado</p>
+</body>
+<script>
+    function clicar () {
+    var a = document.getElementById('nb1')
+    var b = document.getElementById('nb2')
+    var c = document.getElementById('res')
+    var d = Number(a.value)
+    var e = Number(b.value)
+    var f = d + e
+    c.innerHTML = `A soma entre ${d} e ${e} é: ${f}`
+}
+</script>
+</html>

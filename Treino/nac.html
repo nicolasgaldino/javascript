@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../Primeira Tentativa/aula01/favicon.ico" type="image/x-icon">
+    <title>Nacionalidade</title>
+    <style>
+body{
+    background: rgba(15, 15, 248, 0.5);
+    font: normal 15pt arial;
+}
+
+header{
+    color: white;
+    text-align: center;
+}
+
+section{
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.39);
+}
+
+div {
+    text-align: center;
+    padding: 10px;
+}
+
+footer{
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-style: italic
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>
+            De onde você é?
+        </h1>
+    </header>
+    <section>
+        <div>
+            País: <input type="text" name="n1" id="n1">
+        </div>
+        <div id="n2"></div>
+        <div>
+            <p><input type="button" value="Verificar" onclick="clicar()" id="n3"></p>
+        </div>
+    </section>
+    <footer>By: &copy;Nícolas Galdino</footer>
+    <script>
+        function clicar() {
+            var a1 = document.getElementById('n1')
+            var a2 = document.getElementById('n2')
+            var a3 = document.getElementById('n3')
+            if (a1.value == 'Brasil' || a1.value == 'brasil') {
+                a2.innerText = 'Você é brasileiro.'
+            } else {
+                a2.innerText = 'Você é estrangeiro.'
+            }
+        }
+    </script>
+</body>
+</html>

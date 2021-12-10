@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../Primeira Tentativa/aula01/favicon.ico" type="image/x-icon">
+    <title>Hora do Dia</title>
+    <style>
+body{
+    background: rgba(15, 15, 248, 0.5);
+    font: normal 15pt arial;
+}
+
+header{
+    color: white;
+    text-align: center;
+}
+
+section{
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.39);
+}
+
+div {
+    text-align: center;
+    padding: 10px;
+}
+
+footer{
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-style: italic
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>
+            Hora do dia!
+        </h1>
+    </header>
+    <section>
+        <div></div>
+        <div id="n2"></div>
+        <div>
+            <p><input type="button" value="Verificar" onclick="clicar()" id="n3"></p>
+        </div>
+    </section>
+    <footer>By: &copy;Nícolas Galdino</footer>
+    <script>
+        function clicar () {
+            var a1 = new Date()
+            var a2 = a1.getHours()
+            var a3 = document.getElementById('n2')
+            if (a2 < 12) {
+                a3.innerHTML = `São ${a2} horas!<br>Bom dia!`
+            } else if (a2 >= 12 && a2 < 19) {
+                a3.innerHTML = `São ${a2} horas!<br>Boa tarde!`
+            } else if (a2 >= 19 && a2 < 24) {
+                a3.innerHTML = `São ${a2} horas!<br>Boa noite!`
+            }
+        }
+    </script>
+</body>
+</html>
